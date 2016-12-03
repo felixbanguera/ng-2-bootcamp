@@ -1,0 +1,86 @@
+<!-- calculator -->
+<div class="container">
+<div class="row">
+  <div class="col-xs-12 ">
+    <input type="text" [value]="evaluatedValue" class="result">
+  </div>
+
+
+  <div class="col-xs-12">
+
+    <!-- First Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '9', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '8', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '7', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '+', clase: 'btn-success'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+        
+      </div>
+    </div>
+
+      <!-- Second Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '6', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '5', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '4', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '-', clase: 'btn-success'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+        
+      </div>
+    </div>
+
+      <!-- Third Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '3', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '2', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '1', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '*', clase: 'btn-success'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+        
+      </div>
+    </div>
+
+    <!-- Fourth Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '0', clase: 'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '.', clase:'btn-primary'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: true, valor: '=', clase: 'btn-warning'}" (evaluatePressed)="actevaluatePressed($event)"></app-buttonsito>
+      </div>
+      <div class="col-xs-3">
+        <app-buttonsito [configuration]="{isEqual: false, valor: '/', clase:'btn-success'}" (buttonChanged)="actForButtonChanged($event)"></app-buttonsito>
+      </div>
+    </div>
+
+    <!-- Fifth Row -->
+    <div class="row">
+      <div class="col-xs-12">
+        <app-buttonsito [configuration]="{isEqual: false, valor: 'clear', clase:'btn-danger'}" (buttonChanged)="actForButtonChanged($event)" (clearValues)="actForClear($event)"></app-buttonsito>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
